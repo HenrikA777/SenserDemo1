@@ -1,5 +1,6 @@
 BROADCAST_TO_PORT = 15000
 import time
+import udp
 from socket import *
 from datetime import datetime
 from sense_hat import SenseHat
@@ -13,6 +14,6 @@ s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 while True:
     sense.show_message(str(BROADCAST_TO_PORT))
     data = "Current time: " + str(datetime.now()) + "\n" + "Temperatur: " + str(sense.get_temperature) + " Celsius"
-    s.sendto(bytes(data, "UTF-8"), (" ", BROADCAST_TO_PORT))
+    s.sendto(bytes(data, "UTF-8"), ('255.255.255.255', BROADCAST_TO_PORT))
     sense.show_message("Done")
     time.sleep(5)
