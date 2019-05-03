@@ -1,6 +1,5 @@
 BROADCAST_TO_PORT = 15000
 import time
-import udp
 from socket import *
 from datetime import datetime
 from sense_hat import SenseHat
