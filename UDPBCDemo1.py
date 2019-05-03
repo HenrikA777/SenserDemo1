@@ -11,7 +11,7 @@ s = socket(AF_INET, SOCK_DGRAM)
 # no explicit bind: will bind to default IP + random port
 s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 while True:
-	data = "Current time: " + str(datetime.now()) + "\n" + "Temperatur: " + sense.get_temperature_from_humidity + " Celsius"
+	data = "Current time: " + str(datetime.now()) + "\n" + "Temperatur: " + sense.get_temperature + " Celsius"
 	s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
 	print(data)
 	time.sleep(5)
