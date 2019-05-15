@@ -4,7 +4,7 @@ import time
 sense = SenseHat()
 speed = 0
 p = 0
-#not blue xD
+#red not blue xD
 blue = (255, 0, 0)
 sense.clear()
 
@@ -12,8 +12,6 @@ sense.clear()
 while True:
 	acceleration = sense.get_accelerometer_raw()
 	x = acceleration['x']
-	y = acceleration['y']
-	z = acceleration['z']
 	
 	speed = speed * 0.9
 	
@@ -22,7 +20,7 @@ while True:
 	if (x > 0.1 or x < -0.1):
 	  speed += x
 	  
-	if (p == 2):
+	if (p == 1):
 	  print(speed)
 	  p = 0
 	  sense.clear()
