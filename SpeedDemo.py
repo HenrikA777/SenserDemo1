@@ -28,9 +28,16 @@ while True:
 	  sense.clear()
 	  if (speed > 2 and speed < 4):
 	    sense.set_pixel(5, 5, blue)
-	  if (speed > 4):
+	  if (speed > 4 and speed < 8):
 	    sense.set_pixel(6, 5, blue)
+	  if (speed > 8):
+	    sense.set_pixel(7, 5, blue)
 	  if (speed < -2 and speed > -4):
+	    sense.set_pixel(2, 5, blue)
+	  if (speed < -4 and speed > -8):
+	    sense.set_pixel(1, 5, blue)
+	  if (speed < -8):
+	    sense.set_pixel(0, 5, blue)
+	  if (speed < 2 and speed > -2):
 	    sense.set_pixel(4, 5, blue)
-	  if (speed < -4):
 	    sense.set_pixel(3, 5, blue)
