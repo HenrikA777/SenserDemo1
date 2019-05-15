@@ -4,6 +4,7 @@ import time
 sense = SenseHat()
 speed = 0
 p = 0
+#not blue xD
 blue = (255, 0, 0)
 sense.clear()
 
