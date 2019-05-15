@@ -18,25 +18,25 @@ while True:
 	
 	p += 1
   
-	if (x > 0.1 or x < -0.1):
+	if (x > 0.05 or x < -0.05):
 	  speed += x
 	  
 	if (p == 1):
 	  print(speed)
 	  p = 0
 	  sense.clear()
-	  if (speed > 2 and speed < 4):
+	  if (speed > 1 and speed < 2):
 	    sense.set_pixel(5, 5, blue)
-	  if (speed > 4 and speed < 8):
+	  if (speed > 2 and speed < 4):
 	    sense.set_pixel(6, 5, blue)
-	  if (speed > 8):
+	  if (speed > 4):
 	    sense.set_pixel(7, 5, blue)
-	  if (speed < -2 and speed > -4):
+	  if (speed < -1 and speed > -2):
 	    sense.set_pixel(2, 5, blue)
-	  if (speed < -4 and speed > -8):
+	  if (speed < -2 and speed > -4):
 	    sense.set_pixel(1, 5, blue)
-	  if (speed < -8):
+	  if (speed < -4):
 	    sense.set_pixel(0, 5, blue)
-	  if (speed < 2 and speed > -2):
+	  if (speed < 1 and speed > -1):
 	    sense.set_pixel(4, 5, blue)
 	    sense.set_pixel(3, 5, blue)
