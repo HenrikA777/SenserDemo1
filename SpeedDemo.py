@@ -17,7 +17,6 @@ while True:
 	speed = speed * 0.99
 	
 	p += 1
-	time.sleep(0.01)
   
 	if (x > 0.1 or x < -0.1):
 	  speed += x
