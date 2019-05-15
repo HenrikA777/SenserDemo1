@@ -1,0 +1,31 @@
+from sense_hat import SenseHat
+
+sense = SenseHat()
+speed = 0
+p = 0
+blue = (0, 0, 255)
+
+
+while True:
+	acceleration = sense.get_accelerometer_raw()
+	x = acceleration['x']
+	y = acceleration['y']
+	z = acceleration['z']
+	
+	speed = speed * 0.99
+	
+	p += 1
+  
+	if (x > 0.1 or x < -0.1):
+	  speed += x
+	  
+	if (p == 10):
+	  print(speed)
+	  p = 0
+	  sense.clear
+	  if (speed > 2 and speed < 4):
+	    sense.set_pixel(5, 5, blue)
+	  if (speed > 4):
+	    sense.set_pixel(6, 5, blue)
+	  if (speed < -2 and speed > -4):
+	    sense.set_pixel(4, 5, blue)
