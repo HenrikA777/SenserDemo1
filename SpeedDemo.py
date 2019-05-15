@@ -18,10 +18,10 @@ while True:
 	
 	p += 1
   
-	if (x > 0.1 or x < -0.1):
+	if (x > 0.01 or x < -0.01):
 	  speed += x
 	  
-	if (p == 10):
+	if (p == 5):
 	  print(speed)
 	  p = 0
 	  sense.clear()
