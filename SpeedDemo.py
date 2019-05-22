@@ -20,7 +20,7 @@ while True:
 	p += 1
   
 	if (x > 0.2 or x < -0.2):
-	  speed += x
+	  speed += x * 1.5
 	  
 	if (p == 1):
 	  print(speed)
