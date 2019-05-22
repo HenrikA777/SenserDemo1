@@ -13,7 +13,7 @@ while True:
 	acceleration = sense.get_accelerometer_raw()
 	x = acceleration['x']
 	
-	speed = speed * 0.96
+	#speed = speed * 0.98
 	
 	p += 1
   
