@@ -16,6 +16,8 @@ while True:
 	speed = speed * 0.98
 	if (speed < 1 and speed > -1):
 		speed = speed * 0.9
+	elif (speed < 2 and speed > -2):
+		speed = speed * 0.95
 	
 	p += 1
   
