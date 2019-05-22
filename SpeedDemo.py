@@ -13,12 +13,14 @@ while True:
 	acceleration = sense.get_accelerometer_raw()
 	x = acceleration['x']
 	
-	#speed = speed * 0.98
+	speed = speed * 0.98
+	if (speed < 1 and speed > -1):
+		speed = speed * 0.9
 	
 	p += 1
   
-	if (x > 0.3 or x < -0.3):
-	  speed += x * 1.5
+	if (x > 0.2 or x < -0.2):
+	  speed += x
 	  
 	if (p == 1):
 	  print(speed)
