@@ -17,7 +17,7 @@ while True:
 	
 	p += 1
   
-	if (x > 0.1 or x < -0.1):
+	if (x > 0.2 or x < -0.2):
 	  speed += x
 	  
 	if (p == 1):
